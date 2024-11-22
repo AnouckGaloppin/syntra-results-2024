@@ -1,0 +1,16 @@
+{
+  "name": "13.design3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --open --host",
+    "build" : "vite build",
+    "preview" : "vite preview --open --host",
+    "deploy": "surge ./dist syntra-fe-anouck.surge.sh",
+    "postdeploy" : "start chrome https://syntra-fe-anouck.surge.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
