@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Hind+Madurai&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
 :root {
   font-size: 62.5%;
@@ -18,6 +19,13 @@
 * {
   box-sizing: border-box;
   margin: 0;
+}
+body {
+  overflow: hidden;
+  min-height: 100vh;
+}
+canvas {
+  pointer-events: none;
 }
 main {
   display: grid;
@@ -51,6 +59,11 @@ main {
           var(--VioletBlue),
           var(--PersianBlue)
         );
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-name: rotateIn;
+        animation-duration: 500ms;
+        animation-delay: 500ms;
         h3 {
           font-size: 15vw;
           font-weight: 800;
@@ -69,6 +82,11 @@ main {
         margin: 2rem auto;
         line-height: 2.1rem;
       }
+      h2,
+      p {
+        animation-name: fadeInDown;
+        animation-duration: 400ms;
+      }
     }
     &:nth-child(2) {
       h1 {
@@ -85,6 +103,7 @@ main {
           gap: 1.5rem;
           padding: 2rem;
           border-radius: 1rem;
+
           &:nth-child(1) {
             background-color: color-mix(
               in hsl,
@@ -92,6 +111,10 @@ main {
               transparent 100%
             );
             color: var(--LightRed);
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-name: fadeInRight;
+            animation-duration: 200ms;
           }
           &:nth-child(2) {
             background-color: color-mix(
@@ -100,6 +123,11 @@ main {
               transparent 100%
             );
             color: var(--OrangeyYellow);
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-name: fadeInRight;
+            animation-duration: 200ms;
+            animation-delay: 200ms;
           }
           &:nth-child(3) {
             background-color: color-mix(
@@ -108,6 +136,11 @@ main {
               transparent 100%
             );
             color: var(--GreenTeal);
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-name: fadeInRight;
+            animation-duration: 200ms;
+            animation-delay: 400ms;
           }
           &:nth-child(4) {
             background-color: color-mix(
@@ -116,6 +149,11 @@ main {
               transparent 100%
             );
             color: var(--CobaltBlue);
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-name: fadeInRight;
+            animation-duration: 200ms;
+            animation-delay: 600ms;
           }
           /* ONDERSTAANDE ZEER BELANGRIJK OM TE KENNEN! 
           ookal kan dit ook met justify-content: space-between*/
@@ -158,7 +196,6 @@ main {
   }
   body {
     padding: 3rem;
-    min-height: 100vh;
     display: grid;
     place-items: center;
   }
