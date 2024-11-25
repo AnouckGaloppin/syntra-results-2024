@@ -6,10 +6,10 @@
     "dev": "vite --open --host",
     "build" : "vite build",
     "preview" : "vite preview --open --host",
-    "deploy-main": "surge ./dist syntra-fe-anouck-test.surge.sh",
+    "deploy-main": "surge ./dist syntra-fe-anouck.surge.sh",
     "postdeploy-main" : "start chrome https://syntra-fe-anouck.surge.sh",
     "deploy-develop": "surge ./dist syntra-fe-anouck-test.surge.sh",
-    "postdeploy-develop" : "start chrome https://syntra-fe-anouck.surge.sh"
+    "postdeploy-develop" : "start chrome https://syntra-fe-anouck-test.surge.sh"
   },
   "keywords": [],
   "author": "",
